@@ -97,9 +97,10 @@ def youtube():
 
 @app.route('/final_youtube', methods=['GET','POST'])
 def final_youtube():
-    sentiment = session['sentiments'] 
+    sentiment = session['sentiments']
+    senti =  round(sentiment,2) 
     comment = session['comments']
-    return render_template("final_youtube.html",rating=sentiment, keyword=comment)
+    return render_template("final_youtube.html",rating=senti, keyword=comment)
 
 
 

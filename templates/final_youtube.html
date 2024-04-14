@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOUTUBE</title>
@@ -12,145 +19,104 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <style>
-        audio::-webkit-media-controls-panel {
-            background-color: #89BCEB; 
-            color: #001330; 
+        #topbox {
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            background-image: url('../static/youtubeimg.jpeg'); 
+            background-size: cover; 
+            background-position: center; 
+            border-radius: 4px;
+            box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.55); 
+            overflow: hidden; 
         }
-        #audi{
-            width: 78vw;
-            margin: auto;
-            margin-top: 1vw;
+        #topbox::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 4px;
         }
-        nav {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        #dev {
-            margin-top: 2.5vw;
-            margin-right: 2vw;
-            text-decoration: none;
-            color: black;
-            font-family: Montserrat;
-            font-size: 16px;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-
-        }
-
-        #nav_items {
-            text-decoration: none;
-        }
-
-        li {
-            margin: 2vw;
-            text-decoration: none;
-        }
-
-        #inactive {
-            font-family: Montserrat;
-            font-size: 20px;
-            font-weight: lighter;
-            color: rgba(101, 101, 101, 1);
-        }
-
-        #active {
-            font-family: Montserrat;
-            font-size: 24px;
-            font-weight: bolder;
-            color: rgba(89, 1, 130, 1);
-        }
-
-        #in_a {
-            width: 92vw;
-            margin: auto;
-            padding: 1vw;
-            margin-top: 1vw;
-            margin-bottom: 1vw;
-            border: 1px solid gray;
-            border-radius: 12px;
-        }
-
-        #summ {
-            width: fit-content;
-            margin-left: 4.75vw;
-            margin-top: 1vw;
-            border: 0px;
-            border-radius: 12px;
-            padding: 1vw;
-            background: radial-gradient(277.63% 204.57% at 8.57% 10.11%, #9C20C8 0%, #7B4DC6 100%);
+        #title {
+            font-family: 'Grand Hotel', cursive;
+            font-weight: 400;
+            font-size: 60px;
+            font-style: normal;
+            text-align: center;
+            position: absolute;
+            top: 45%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            z-index: 1; 
             color: white;
         }
-
-        #summ:hover {
-            -webkit-transform: translate(1.1);
-            transform: scale(1.1);
-            transition: 0.5s;
-        }
-
         #op_a {
-            width: 92vw;
+            text-align: center;
             margin: auto;
             padding: 1vw;
             margin-top: 1vw;
             margin-bottom: 1vw;
-            border: 1px solid gray;
-            border-radius: 12px;
-        }
+            border: none;
 
+        }
         #op_c {
-            width: 92vw;
             margin: auto;
-            padding: 1vw;
-            margin-top: 1vw;
-            margin-bottom: 1vw;
-            border: 1px solid gray;
+            margin-top: 1%;
             border-radius: 12px;
+            border: 2px solid #D40E14;
+            background: #FFF;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            width: 1294.002px;
+            height: auto;
         }
+        #exp{
+            color: #000;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
 
-        #in_b {
-            width: 92vw;
+        }
+        #rating{
+            border-color: transparent;
+            color: #BC0C11;
+            font-family: Poppins;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            width: 150px;
+
+        }
+        #maxrate{
+            color: #000;
+            font-family: Poppins;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        #line{
+            width: 1294.002px;
+            height: 2px;
+            background: #870F13;
             margin: auto;
-            padding: 1vw;
-            border: 1px solid gray;
-            border-radius: 12px;
-            margin-top: 1.5vw;
+             
         }
-
-        #surf {
-            width: fit-content;
-            margin-left: 4.75vw;
-            margin-top: 1vw;
-            border: 0px;
-            border-radius: 12px;
-            padding: 1vw;
-            background: radial-gradient(277.63% 204.57% at 8.57% 10.11%, #48D198 0%, #36CAC1 100%);
-            color: white;
-        }
-
-        #surf:hover {
-            -webkit-transform: translate(1.1);
-            transform: scale(1.1);
-            transition: 0.5s;
-        }
-
-        #op_b {
-            width: 92vw;
+        #com{
+            width: 1294.002px;
             margin: auto;
-            padding: 1vw;
-            margin-top: 1vw;
-            margin-bottom: 5vw;
-            border: 1px solid gray;
-            border-radius: 12px;
+            color: #BC6565;
+            font-family: Poppins;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
         }
-
-
-
         #in_file {
             width: 92vw;
             margin: auto;
@@ -159,33 +125,30 @@
             border-radius: 12px;
         }
     </style>
-
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <a id="nav_items" href="/url">
-                <li id="inactive">URL</li>
-            </a>
-            <a id="nav_items" href="/text">
-                <li id="inactive">TEXT</li>
-            </a>
-            <a id="nav_items" href="/pdf">
-                <li id="inactive">PDF</li>
-            </a>
-            <a id="nav_items" href="/youtube">
-                <li id="active">YouTube</li>
-            </a>
-        </ul>
-        <a id="dev" href="/developers">Developers</a>
-    </nav>
+    <div id="topbox">
+        <div class="overlay"></div>
+        <p id="title">
+            Rating Generator
+        </p>
+
+    </div>
     <form method="post" target="_self" action="{{ url_for('final_youtube') }}">
         <div class="col">
             <div class="row">
-                <p id="op_a">{% if rating %}Overall Rating Out of 5 for the video based on comments is: {{ rating }}{%
-                    endif %}/5</p>
+                <p id="op_a">
+                    <span id="rating">
+                        {% if rating %}{{ rating }}{%endif %}
+                    </span>
+                    <span id="maxrate">
+                        /5
+                    </span></p>
             </div>
+            <div id="com">
+                <p>Top 10 comments</p>
+            </div>
+            <div id="line"></div>
             <div class="row">
                 <p id="op_c">{% if keyword %}The first 10 comments from the video link provided by you are:<br>{%for kw in
                     keyword%}{{kw}}<br>{%endfor%}{%endif%}</p>
